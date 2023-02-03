@@ -86,8 +86,7 @@ export default function Chat() {
         <div className="imageContainer">
           <Loader />
           {/* <img className="Head" src={Head} alt="Head" /> */}
-          <Image className={style.Head} src={Head} width={100}
-                height={24}/>
+          <Image className={style.Head} src={Head}/>
         </div>
 
         <div className={style.MessageContainer}>
