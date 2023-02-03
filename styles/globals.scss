@@ -1,0 +1,169 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+  
+}
+@import "./variables.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+.certificates{
+  // color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center ;
+  flex-direction: column;
+  gap: 50px;
+
+}
+
+.cert{
+  width: 500px;
+
+    @media screen and (min-width: 300px) and (max-width: 400px) {
+      //css code
+    width: 350px;
+
+  }
+}
+
+.backButton {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  &:hover {
+    text-decoration: underline;
+  }
+  img {
+    height: 20px;
+    width: auto;
+    margin-bottom: -3px;
+    margin-right: 3px;
+  }
+}
+
+
+.animated-box {
+  position: relative;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0), 0 4px 16px rgba(0, 0, 0, 0),
+    0 4px 24px rgba(0, 0, 0, 0);
+}
+
+.animated-box.start .lines svg,
+.start .lines svg {
+  animation: stroke 0.8s linear;
+}
+.animated-box.start,
+.start{
+  color: white !important;;
+  background: black;
+}
+
+.animated-box .lines,
+.lines {
+  position: absolute;
+  inset: 0;
+  mix-blend-mode: hard-light;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.animated-box .lines > div,
+.lines > div {
+  position: absolute;
+  inset: 0;
+}
+
+.animated-box .lines > div:last-child,
+.lines > div:last-child {
+  transform: rotate(180deg);
+}
+
+.animated-box .lines > div svg {
+  display: block;
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+  fill: none;
+  stroke-width: 2;
+  stroke: #34ebc9;
+  width: 100%;
+  height: 100%;
+  stroke-dasharray: 12 12;
+  stroke-dashoffset: 12;
+  opacity: 0;
+  // transform: rotate(-1deg) translate3d(0, 0, 0);
+}
+
+.lines > div svg {
+  display: block;
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+  fill: none;
+  stroke-width: 1;
+  stroke: $color2;
+  width: 100%;
+  height: 100%;
+  stroke-dasharray: 12 12;
+  stroke-dashoffset: 12;
+  opacity: 0;
+  // transform: rotate(-1deg) translate3d(0, 0, 0);
+}
+
+.animated-box .lines > div svg:nth-child(1) {
+  stroke: $color2;
+}
+
+.lines > div svg:nth-child(1) {
+  stroke: #f8fcff;
+}
+
+.animated-box .lines > div svg:nth-child(2),
+.lines > div svg:nth-child(2) {
+  stroke-width: 6px;
+  filter: blur(20px);
+}
+
+.animated-box .lines > div svg:nth-child(3),
+.lines > div svg:nth-child(3) {
+  stroke-width: 5px;
+  filter: blur(6px);
+}
+
+.animated-box .lines > div svg:nth-child(4),
+.lines > div svg:nth-child(4) {
+  stroke-width: 10px;
+  filter: blur(56px);
+}
+
+@keyframes stroke {
+  30%,
+  55% {
+    opacity: 1;
+  }
+
+  100% {
+    stroke-dashoffset: 5;
+    opacity: 0;
+  }
+}
+
+.imageContainer{
+  position:relative;
+}
+
+.loader{
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  position:absolute;
+  bottom:0;
+  right:0;
+  width: 15px;
+  height: 15px;
+  margin: 10px 40px;
+  border-radius: 50%;
+  background: black;
+}
