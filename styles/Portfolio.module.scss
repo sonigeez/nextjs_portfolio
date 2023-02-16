@@ -1,0 +1,96 @@
+@import './variables.scss';
+
+.Portfolio {
+	max-width: 1000px;
+	margin: 0 auto;
+
+	h1 {
+		@media (max-width: 800px) {
+			font-size: 1.5rem;
+		}
+	}
+	.backButton {
+		color: $color1;
+		text-decoration: none;
+		font-weight: bold;
+		&:hover {
+			text-decoration: underline;
+		}
+		img {
+			height: 20px;
+			width: auto;
+			margin-bottom: -3px;
+			margin-right: 3px;
+		}
+	}
+	.grid {
+		margin-top: 4rem;
+		grid-template-columns: 1fr 1fr 1fr;
+		display: grid;
+		grid-gap: 1rem;
+		@media (max-width: $breakMobile) {
+			grid-template-columns: 1fr;
+		}
+		.Project {
+			background: #000;
+			border-radius: 10px;
+			height: 200px;
+			color: #fff;
+			position: relative;
+			overflow: hidden;
+			@media (max-width: $breakMobile) {
+				height: 150px;
+				grid-gap: 0.5rem;
+			}
+			.front,
+			.back {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 100%;
+				height: 100%;
+				font-size: 2rem;
+				padding: 30px;
+				@include ease;
+				@include flexCenter;
+				text-align: center;
+				color: $color2;
+				overflow: hidden;
+				img {
+					max-height: 80%;
+					width: auto;
+					height: auto;
+					max-width: 50%;
+				}
+			}
+
+			.back {
+				transform: translateY(100%);
+				font-size: 1rem;
+				a {
+					margin: 5px;
+					display: inline-block;
+					background: $color2;
+					border-radius: 5px;
+					padding: 5px 10px;
+					text-decoration: none;
+					color: $color1;
+					@include ease;
+					&:hover {
+						@include ease;
+						background: $color1;
+						color: $color2;
+					}
+				}
+			}
+			&:hover .front {
+				@include ease;
+				transform: translateY(-100%);
+			}
+			&:hover .back {
+				@include ease;
+				transform: translateY(0);
+			}
+		}
+	}
+}

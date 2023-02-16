@@ -27,7 +27,7 @@ const data = [
 	{
 		slug: 'tech',
 		messages: [
-			"I love building with React, Flutter, Node/Express right now",
+			"I quite proficient in building with React/Next.js, Flutter, Node/Express right now",
 			"but I don't believe in bounding myself with any tech stack",
 			'I can easily learn and adapt any new technology',
 		],
