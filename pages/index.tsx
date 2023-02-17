@@ -22,7 +22,7 @@ const onFocus = () => {
 // User has switched away from the tab (AKA tab is hidden)
 const onBlur = () => {
   setTitle('Wow! so smart');
-  setIcon('http://www.rw-designer.com/icon-image/21555-32x32x32.png');
+  setIcon('/favicon.jpeg');
 };
 
 
