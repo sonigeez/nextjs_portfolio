@@ -18,7 +18,7 @@ export default function Header() {
 
   // User has switched away from the tab (AKA tab is hidden)
   const onBlur = () => {
-    setTitle("Wow! so smart");
+    setTitle("come back baby🥺");
     setIcon("/favicon.jpeg");
   };
 
