@@ -13,26 +13,15 @@ import { useRouter } from 'next/router'
 
 
 export default function Chat() {
-  // const navigate = useRouter();
-  // const { slug } = navigate.query
-  // console.log(slug)
-  // const { status } = navigate.query
-
-  // const currentDialog = data.find((dialog) => dialog.slug === slug) || data[0];
-  // console.log(currentDialog)
-  // const [messages, setMessages] = useState([]);
-  // const [completed, setCompleted] = useState(false);
 
   const navigate = useRouter();
   const { slug, status } = navigate.query;
   let currentDialog;
-  console.log(slug)
   if(slug!==undefined){
     currentDialog = data.find((dialog) => dialog.slug === slug[0]) || data[0];
   }else{
     currentDialog = data[0]
   }
-  console.log(currentDialog)
 
   const [messages, setMessages] = useState([]);
   const [completed, setCompleted] = useState(false);

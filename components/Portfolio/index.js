@@ -1,7 +1,6 @@
 import React from "react";
 import Project from "./project";
 import Projects from "./data";
-// import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Chat from "../../public/chat.svg";
 import Link from 'next/link'
