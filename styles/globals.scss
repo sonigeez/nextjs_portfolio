@@ -167,3 +167,32 @@ body {
   border-radius: 50%;
   background: black;
 }
+.eye {
+  position: relative;
+  width: 10px;
+  height: 12px;
+  background-color: white;
+  // margin: 0 20px;
+  border-radius: 50%;
+}
+
+.eye:before {
+  content: '';
+  position: absolute;
+  // transform: translate(-50%, -50%);
+  width: 4px;
+  height: 4px;
+  margin: 1px;
+  border-radius: 50%;
+  background: black;
+  // border: 10px solid #2196f3;
+  box-sizing: border-box;
+}
+
+.eyess{
+  display: flex;
+  position: absolute;
+  top: 43%;
+  left: 26% 
+  // left: 100px;
+}

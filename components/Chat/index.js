@@ -4,23 +4,21 @@ import data from "./data";
 import Message from "./Message";
 import Answer from "./Answer";
 import Typing from "./Typing";
-import Head from "../../public/head.jpg";
-import Image from 'next/image'
+import Head from "../../public/head2.png";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import Loader from "../loader";
 // import { useParams } from "react-router-dom";
-import { useRouter } from 'next/router'
-
+import { useRouter } from "next/router";
 
 export default function Chat() {
-
   const navigate = useRouter();
   const { slug, status } = navigate.query;
   let currentDialog;
-  if(slug!==undefined){
+  if (slug !== undefined) {
     currentDialog = data.find((dialog) => dialog.slug === slug[0]) || data[0];
-  }else{
-    currentDialog = data[0]
+  } else {
+    currentDialog = data[0];
   }
 
   const [messages, setMessages] = useState([]);
@@ -70,12 +68,18 @@ export default function Chat() {
         variants={containerMotion}
         initial="hidden"
         animate="show"
-          className={style.Window}
+        className={style.Window}
       >
         <div className="imageContainer">
           <Loader />
           {/* <img className="Head" src={Head} alt="Head" /> */}
-          <Image className={style.Head} src={Head}/>
+          <div className="goku">
+            <Image className={style.Head} src={Head} />
+            <div className="eyess">
+                <div className="eye"></div>
+                <div className="eye"></div>
+            </div>
+          </div>
         </div>
 
         <div className={style.MessageContainer}>
