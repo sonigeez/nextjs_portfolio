@@ -56,7 +56,7 @@ export default function Header() {
           </li>
           <li>
             <a
-              href="https://www.linkedin.com/in/imsonibharat"
+              href="https://www.linkedin.com/"
               target="_blank"
               rel="noopener noreferrer"
             >
